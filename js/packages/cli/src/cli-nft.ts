@@ -35,12 +35,12 @@ function programCommand(name: string) {
     .command(name)
     .option(
       '-e, --env <string>',
-      'Solana cluster env name',
+      'SafeCoin cluster env name',
       'devnet', //mainnet-beta, testnet, devnet
     )
     .option(
       '-k, --keypair <path>',
-      `Solana wallet location`,
+      `Safecoin wallet location`,
       '--keypair not provided',
     )
     .option('-l, --log-level <string>', 'log level', setLogLevel);
