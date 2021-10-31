@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #
-# Updates the solana version in all the SPL crates
+# Updates the safecoin version in all the SPL crates
 #
 
 solana_ver=$1
-if [[ -z $solana_ver ]]; then
-  echo "Usage: $0 <new-solana-version>"
+if [[ -z $safecoin_ver ]]; then
+  echo "Usage: $0 <new-safecoin-version>"
   exit 1
 fi
 
@@ -15,25 +15,25 @@ declare tomls=()
 while IFS='' read -r line; do tomls+=("$line"); done < <(find . -name Cargo.toml)
 
 crates=(
-  solana-account-decoder
-  solana-banks-client
-  solana-banks-server
-  solana-bpf-loader-program
-  solana-clap-utils
-  solana-cli-config
-  solana-cli-output
-  solana-client
-  solana-core
-  solana-logger
-  solana-notifier
-  solana-program
-  solana-program-test
-  solana-remote-wallet
-  solana-runtime
-  solana-sdk
-  solana-stake-program
-  solana-transaction-status
-  solana-vote-program
+  safecoin-account-decoder
+  safecoin-banks-client
+  safecoin-banks-server
+  safecoin-bpf-loader-program
+  safecoin-clap-utils
+  safecoin-cli-config
+  safecoin-cli-output
+  safecoin-client
+  safecoin-core
+  safecoin-logger
+  safecoin-notifier
+  safecoin-program
+  safecoin-program-test
+  safecoin-remote-wallet
+  safecoin-runtime
+  safecoin-sdk
+  safecoin-stake-program
+  safecoin-transaction-status
+  safecoin-vote-program
 )
 
 set -x
